@@ -27,7 +27,7 @@ Head over to [Pythonista.app](https://pythonista.app) for more information.
 
 Unfortunately, the old community forum was essentially run over by bots, and I don't have the resources for the maintenance that was required to host this myself. I've decided to move the forum to GitHub, using the [*Discussions*](https://github.com/omz/Pythonista/discussions) feature of this repository.
 
-For posting bug reports, please use the [Pythonista-Issues](https://github.com/omz/Pythonista-Issues) repository.
+For posting bug reports, please continue using the [Pythonista-Issues](https://github.com/omz/Pythonista-Issues) repo for now. I may move issues to this repository eventually, but that hasn't happened yet.
 
 * [Community Forum](https://github.com/omz/Pythonista/discussions)
 * [Issue Tracker](https://github.com/omz/Pythonista-Issues)
