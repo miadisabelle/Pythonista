@@ -1,6 +1,6 @@
 # Pythonista
 
-This repository hosts the official [community forum](https://github.com/omz/Pythonista/discussions) for everything related to [Pythonista](https://pythonista.app), and contains current news and useful links around the app.
+This repository hosts the new official [community forum](https://github.com/omz/Pythonista/discussions) for [Pythonista](https://pythonista.app), and contains news and useful links around the app.
 
 ## News
 
