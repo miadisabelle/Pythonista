@@ -1,6 +1,6 @@
 # Pythonista
 
-This repository hosts the official community forum for everything related to [Pythonista](https://pythonista.app) and this ReadMe with links to other useful resources.
+This repository hosts the official [community forum](https://github.com/omz/Pythonista/discussions) for everything related to [Pythonista](https://pythonista.app), and this ReadMe with links to other useful resources.
 
 ## News
 
