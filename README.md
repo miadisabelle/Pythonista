@@ -8,16 +8,16 @@ This repository hosts the official [community forum](https://github.com/omz/Pyth
 > 
 > Unfortunately, the old community forum had massive problems with spam, so that I've decided to give up on self-hosting this, and to move the forum here on GitHub instead, where most users probably have an account anyway.
 >
-> So, if you want to talk to other Pythonista users, head over to the [Discussions](https://github.com/omz/Pythonista/discussions) tab in this repo. As Pythonista is mostly a solo project, I can often incorporate your feedback directly, but I'm also often not able to respond to all messages sent to me. Apologies for that!
+> So, to read about what I've planned for Pythonista, and to participate in the discussion with other users, head over to the [Discussions](https://github.com/omz/Pythonista/discussions) tab in this repo. As Pythonista is mostly a solo project, I can often incorporate your feedback directly, but I'm also often not able to respond to all messages sent to me.
 > 
 
 ## What is Pythonista?
 
-Pythonista is an iOS app for developing and running Python scripts locally on iPad and iPhone. I released the first version for the original iPad over 12 years ago, but the app has grown and adapted to the advancements in both iOS and the Python language.
+Pythonista is an iOS app for developing and running Python scripts locally on iPad and iPhone. I released the first version, running on the original iPad over 12 years ago, but the app has grown and adapted to the advancements in both the iOS ecosystem and the Python language.
 
-Pythonista provides everything you need to start coding right away – a native Python runtime with many included open-source libraries, a touch-optimized code editor, an interactive console, and many other tools.
+Pythonista provides everything you need to start coding right away – a native Python runtime with many included open-source libraries, a touch-optimized code editor, an interactive console, and many other tools. If you're an iOS power user, you can also use Pythonista for automation purposes, using the Shortcuts integration and Python modules tailored specifically for iOS, like `photos`, `location`, `notifications`, and more.
 
-Pythonista is exclusively available on the App Store without a subscription, as a one-time purchase.
+Pythonista is exclusively available on the iOS App Store as a one-time purchase with NO subscription.
 
 Head over to [Pythonista.app](https://pythonista.app) for more information.
 
