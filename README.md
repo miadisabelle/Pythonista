@@ -2,6 +2,10 @@
 
 This repository hosts the official community forum for everything related to [Pythonista](https://pythonista.app) and this ReadMe with links to other useful resources.
 
+## News
+
+...
+
 ## What is Pythonista?
 
 Pythonista is an iOS app for developing and running Python scripts locally on iPad and iPhone. I released the first version for the original iPad over 12 years ago, but the app has grown and adapted to the advancements in both iOS and the Python language.
@@ -16,14 +20,18 @@ Unfortunately, the old community forum was essentially run over by bots, and I d
 
 For posting bug reports, please use the [Pythonista-Issues](https://github.com/omz/Pythonista-Issues) repository.
 
-* [&rarr; Pythonista Discussions](https://github.com/omz/Pythonista/discussions)
-* [&rarr; Pythonista Issue Tracker](https://github.com/omz/Pythonista-Issues)
+* [Pythonista Discussions](https://github.com/omz/Pythonista/discussions)
+* [Pythonista Issue Tracker](https://github.com/omz/Pythonista-Issues)
 
 ## Documentation
 
 Pythonista's documentation contains lots of information and reference materials about Python, the standard library, additional modules, and more. You can read it offline in the app or in a web browser:
 
-* [&rarr; Pythonista Documentation](https://omz-software.com/pythonista/docs)
+* [Pythonista Documentation](https://omz-software.com/pythonista/docs)
+
+## Beta Versions
+
+...'
 
 ## Useful Links
 
