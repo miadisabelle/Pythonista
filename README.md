@@ -42,6 +42,6 @@ Pythonista's documentation contains lots of information and reference materials 
 
 Currently, no beta is available, but I'm working on a new TestFlight build with support for Python 3.13 and more. Stay tuned!
 
-## Useful Links
+## External Links
 
 * [Pythonista-Tools](https://github.com/Pythonista-Tools) – (inofficial) An open GitHub Organization of people who want to collaborate to build great tools around Pythonista for iOS
