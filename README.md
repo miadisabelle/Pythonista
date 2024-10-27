@@ -1,10 +1,18 @@
 # Pythonista
 
-This repository hosts the official [community forum](https://github.com/omz/Pythonista/discussions) for everything related to [Pythonista](https://pythonista.app), and this ReadMe with links to other useful resources.
+This repository hosts the official [community forum](https://github.com/omz/Pythonista/discussions) for everything related to [Pythonista](https://pythonista.app), and this ReadMe with current news, and links to other useful resources.
 
 ## News
 
-...
+> **2024-10-27** – I've started working on a major update for Pythonista a few months ago, and I'm finally ready to share some of my progress.
+> 
+> Unfortunately, the old community forum had massive problems with spam, so that I've decided to give up on self-hosting this, and to move the forum here to GitHub instead, where most users probably have an account anyway.
+>
+> So, if you want to discuss with other Pythonista users, head over to the [Discussions]() tab in this repo. Your (constructive) feedback is also very valuable to me. Pythonista is mostly a solo project, so I can often incorporate feedback directly, though I also often can't keep up with answering all messages sent to me.
+>
+> All the best,
+> 
+>  -- Ole
 
 ## What is Pythonista?
 
@@ -31,7 +39,7 @@ Pythonista's documentation contains lots of information and reference materials 
 
 ## Beta Versions
 
-...'
+Currently, no beta is available, but I'm working on a new TestFlight build with support for Python 3.13 and more. Stay tuned!
 
 ## Useful Links
 
