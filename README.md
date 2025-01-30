@@ -4,6 +4,8 @@ This repository hosts the new official [community forum](https://github.com/omz/
 
 ## News
 
+> **2025-30-01** – I've posted a first demo video of the new *Pythonista Lab* on [YouTube](https://youtube.com/shorts/X1tUdG6Fnvc).
+> 
 > **2024-10-27** – I've started working on a major update for Pythonista a few months ago, and I'm finally ready to share some of my progress.
 > 
 > Unfortunately, the old community forum had massive problems with spam, so that I've decided to give up on self-hosting this, and to move the forum here on GitHub instead, where most users probably have an account anyway.
