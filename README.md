@@ -4,7 +4,9 @@ This repository hosts the new official [community forum](https://github.com/omz/
 
 ## News
 
-> **2025-30-01** – I've posted a first demo video of the new [*Pythonista Lab*](https://pythonista.app/lab) on [YouTube](https://youtube.com/shorts/X1tUdG6Fnvc).
+> **2025-03-04** – The first build of [Pythonista Lab](https://pythonista.app/lab) is up on TestFlight and waiting for Apple's review, so it should available for testing pretty soon. You can still sign up for the beta [here](https://pythonista.app/lab).
+> 
+> **2025-01-30** – I've posted a first demo video of the new [*Pythonista Lab*](https://pythonista.app/lab) on [YouTube](https://youtube.com/shorts/X1tUdG6Fnvc).
 > 
 > **2024-10-27** – I've started working on a major update for Pythonista a few months ago, and I'm finally ready to share some of my progress.
 > 
