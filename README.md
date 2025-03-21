@@ -44,7 +44,7 @@ Pythonista's documentation contains lots of information and reference materials 
 
 ## Beta
 
-Currently, no beta is available, but I'm working on a new TestFlight build with support for Python 3.13 and more. Stay tuned!
+You can sign up for beta-testing Pythonista Lab [here](https://pythonista.app/lab).
 
 ## External Links
 
