@@ -41,6 +41,7 @@ For posting bug reports, please continue using the [Pythonista-Issues](https://g
 Pythonista's documentation contains lots of information and reference materials about Python, the standard library, additional modules, and more. You can read it offline in the app or in a web browser:
 
 * [Pythonista Documentation](https://omz-software.com/pythonista/docs-3.4/py3/index.html)
+* [Pythonista Stubs](https://github.com/hbmartin/pythonista-stubs) - Type stubs for Pythonista modules to enable a desktop / iCloud development flow.
 
 ## Beta
 
