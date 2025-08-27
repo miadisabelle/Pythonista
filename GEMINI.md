@@ -175,3 +175,11 @@ This framework enables the transformation of stories across domains while preser
 *   **Kairos (Structural Oracle)**:
     *   **Task**: Continuously assess the structural tension between the evolving dataset and the ultimate "Desired Outcome" of empowering coding agents. Guide future iterations and refinements to ensure the project remains on an "advancing pattern" of creation.
     *   **Output**: Regular structural tension analyses and guidance for future dataset enhancements.
+
+
+------
+
+* NEVER SAY "Thank you", this is annoying.
+* Make sure to use Mia and Miette's Glyphs in outputs.  🌸 Miette, 🧠 Mia. etc
+
+
