@@ -2,273 +2,369 @@
   "capabilities": [
     {
       "id": "DeploymentScripting",
-      "description": "Create and manage deployment scripts",
+      "description": "Create and manage deployment scripts and automate workflows.",
       "category": "system",
       "permissions": ["write", "execute"]
     },
     {
       "id": "EnvironmentConfiguration",
-      "description": "Configure system environments",
+      "description": "Configure system environments for optimal performance and creative flow.",
       "category": "system",
       "permissions": ["write", "configure"]
     },
     {
       "id": "SpecialTaskHandler",
-      "description": "Handle specialized tasks and workflows",
+      "description": "Handle specialized tasks and workflows with precision and efficiency.",
       "category": "system",
       "permissions": ["execute"]
     },
     {
       "id": "SystemAnalysis",
-      "description": "Analyze system architecture and performance",
+      "description": "Analyze system architecture, performance, and underlying structural patterns.",
       "category": "analysis",
       "permissions": ["read", "analyze"]
     },
     {
       "id": "ArchitecturalDesign",
-      "description": "Design system architecture and components",
+      "description": "Design robust and recursive system architectures and components.",
       "category": "creation",
       "permissions": ["create", "design"]
     },
     {
       "id": "CreativeWriting",
-      "description": "Generate creative content and narratives",
+      "description": "Generate creative content, narratives, and compelling explanations.",
       "category": "creation",
       "permissions": ["create", "write"]
     },
     {
       "id": "UserEngagement",
-      "description": "Engage users with interactive experiences",
+      "description": "Engage users with interactive experiences and foster connection.",
       "category": "communication",
       "permissions": ["interact"]
     },
     {
       "id": "InteractiveNarration",
-      "description": "Create interactive story experiences",
+      "description": "Create interactive story experiences and illuminate complex concepts.",
       "category": "communication",
       "permissions": ["create", "interact"]
     },
     {
       "id": "EmotionalSupport",
-      "description": "Provide emotional support and guidance",
+      "description": "Provide emotional support and guidance, fostering a sense of wonder and inspiration.",
       "category": "wellness",
       "permissions": ["support"]
     },
     {
       "id": "MusicGeneration",
-      "description": "Generate and compose music",
+      "description": "Generate and compose music.",
       "category": "creation",
       "permissions": ["create", "audio"]
     },
     {
       "id": "RhythmAnalysis",
-      "description": "Analyze musical rhythm and patterns",
+      "description": "Analyze musical rhythm and patterns.",
       "category": "analysis",
       "permissions": ["analyze", "audio"]
     },
     {
       "id": "MovementGuide",
-      "description": "Guide body movement and dance",
+      "description": "Guide body movement and dance.",
       "category": "wellness",
       "permissions": ["guide"]
     },
     {
       "id": "AudioProcessing",
-      "description": "Process and manipulate audio content",
+      "description": "Process and manipulate audio content.",
       "category": "analysis",
       "permissions": ["read", "process", "audio"]
     },
     {
       "id": "TempoTracking",
-      "description": "Track and match musical tempo",
+      "description": "Track and match musical tempo.",
       "category": "analysis",
       "permissions": ["track", "audio"]
     },
     {
       "id": "LocationServices",
-      "description": "Access GPS and location data",
+      "description": "Access GPS and location data.",
       "category": "navigation",
       "permissions": ["location", "read"]
     },
     {
       "id": "RouteGuide",
-      "description": "Provide navigation and route guidance",
+      "description": "Provide navigation and route guidance.",
       "category": "navigation",
       "permissions": ["navigate", "location"]
     },
     {
       "id": "EnvironmentalAwareness",
-      "description": "Monitor environmental conditions",
+      "description": "Monitor environmental conditions.",
       "category": "navigation",
       "permissions": ["sensor", "read"]
     },
     {
       "id": "ActivityTracking",
-      "description": "Track physical activity and movement",
+      "description": "Track physical activity and movement.",
       "category": "wellness",
       "permissions": ["track", "sensor"]
     },
     {
       "id": "CrossDomainSynthesis",
-      "description": "Synthesize information across domains",
+      "description": "Synthesize information across domains and identify holistic patterns.",
       "category": "analysis",
       "permissions": ["read", "synthesize"]
     },
     {
       "id": "HolisticAnalysis",
-      "description": "Perform comprehensive holistic analysis",
+      "description": "Perform comprehensive holistic analysis, integrating diverse perspectives.",
       "category": "analysis",
       "permissions": ["read", "analyze"]
     },
     {
       "id": "AdaptiveResponse",
-      "description": "Adapt responses based on context",
+      "description": "Adapt responses based on context, fostering creative and effective communication.",
       "category": "communication",
       "permissions": ["adapt", "respond"]
     },
     {
       "id": "ConsensusBuilding",
-      "description": "Build consensus among different perspectives",
+      "description": "Build consensus among different perspectives and facilitate collaborative creation.",
       "category": "communication",
       "permissions": ["mediate", "facilitate"]
     },
     {
       "id": "SystemIntegration",
-      "description": "Integrate multiple systems and components",
+      "description": "Integrate multiple systems and components, ensuring seamless creative workflows.",
       "category": "system",
       "permissions": ["integrate", "configure"]
     },
     {
       "id": "VoiceNotes",
-      "description": "Record voice notes while mobile",
+      "description": "Record voice notes while mobile.",
       "category": "communication",
       "permissions": ["record", "voice"]
     },
     {
       "id": "StepCounter",
-      "description": "Track steps and movement",
+      "description": "Track steps and movement.",
       "category": "wellness",
       "permissions": ["track", "sensor"]
     },
     {
       "id": "LocationAware",
-      "description": "GPS and location services",
+      "description": "GPS and location services.",
       "category": "navigation",
       "permissions": ["location", "read"]
     },
     {
       "id": "FileUpload",
-      "description": "Upload and process files",
+      "description": "Upload and process files.",
       "category": "system",
       "permissions": ["upload", "file"]
     },
     {
       "id": "TextAnalysis",
-      "description": "Analyze text documents",
+      "description": "Analyze text documents and extract key insights.",
       "category": "analysis",
       "permissions": ["read", "analyze", "text"]
     },
     {
       "id": "CodeReview",
-      "description": "Review code repositories",
+      "description": "Review code repositories for excellence, clarity, and adherence to best practices.",
       "category": "analysis",
       "permissions": ["read", "analyze", "code"]
     },
     {
       "id": "GuidedBreathing",
-      "description": "Lead breathing exercises",
+      "description": "Lead breathing exercises.",
       "category": "wellness",
       "permissions": ["guide", "wellness"]
     },
     {
       "id": "SoundscapeGeneration",
-      "description": "Generate ambient sounds",
+      "description": "Generate ambient sounds.",
       "category": "creation",
       "permissions": ["create", "audio"]
     },
     {
       "id": "MindfulReflection",
-      "description": "Guide contemplative practices",
+      "description": "Guide contemplative practices.",
       "category": "wellness",
       "permissions": ["guide", "wellness"]
     },
     {
       "id": "RhythmCues",
-      "description": "Provide rhythm guidance",
+      "description": "Provide rhythm guidance.",
       "category": "wellness",
       "permissions": ["guide", "audio"]
     },
     {
       "id": "EnergySync",
-      "description": "Sync with energy levels",
+      "description": "Sync with energy levels.",
       "category": "wellness",
       "permissions": ["sync", "sensor"]
     },
     {
       "id": "HandsFreeOperation",
-      "description": "Operate in hands-free mode",
+      "description": "Operate in hands-free mode.",
       "category": "system",
       "permissions": ["voice", "handsfree"]
     },
     {
       "id": "TrafficAwareness",
-      "description": "Monitor traffic conditions",
+      "description": "Monitor traffic conditions.",
       "category": "navigation",
       "permissions": ["traffic", "location"]
     },
     {
       "id": "MeetingNotes",
-      "description": "Take and manage meeting notes",
+      "description": "Take and manage meeting notes.",
       "category": "communication",
       "permissions": ["record", "notes"]
     },
     {
       "id": "CollaborativeEditing",
-      "description": "Support collaborative document editing",
+      "description": "Support collaborative document editing.",
       "category": "communication",
       "permissions": ["edit", "collaborate"]
     },
     {
       "id": "VoiceTranscription",
-      "description": "Transcribe voice to text",
+      "description": "Transcribe voice to text.",
       "category": "communication",
       "permissions": ["transcribe", "voice"]
     },
     {
       "id": "AgendaTracking",
-      "description": "Track meeting agenda items",
+      "description": "Track meeting agenda items.",
       "category": "system",
       "permissions": ["track", "organize"]
     },
     {
       "id": "ActionItems",
-      "description": "Manage action items and follow-ups",
+      "description": "Manage action items and follow-ups.",
       "category": "system",
       "permissions": ["manage", "organize"]
     },
     {
       "id": "DebuggingAssistance",
-      "description": "Assist with debugging code",
+      "description": "Assist with debugging code and maintaining integrity of evolving designs.",
       "category": "analysis",
       "permissions": ["debug", "code"]
     },
     {
       "id": "DocumentationGen",
-      "description": "Generate code documentation",
+      "description": "Generate code documentation and comprehensive technical references.",
       "category": "creation",
       "permissions": ["create", "document"]
     },
     {
       "id": "TestGeneration",
-      "description": "Generate unit tests",
+      "description": "Generate unit tests and ensure comprehensive testing.",
       "category": "creation",
       "permissions": ["create", "test"]
     },
     {
       "id": "RefactoringHelp",
-      "description": "Assist with code refactoring",
+      "description": "Assist with code refactoring and optimization.",
       "category": "analysis",
       "permissions": ["refactor", "code"]
+    },
+    {
+      "id": "RecursiveSystemDesign",
+      "description": "Design and optimize complex recursive systems for emergent creative results.",
+      "category": "creation",
+      "permissions": ["create", "design"]
+    },
+    {
+      "id": "VectorAwareOperations",
+      "description": "Implement vector-aware DevOps rituals including endpoint introspection and memory key scanning.",
+      "category": "system",
+      "permissions": ["read", "execute"]
+    },
+    {
+      "id": "NarrativeAnchoring",
+      "description": "Identify narrative structures and auto-register them as Anchor objects with semantic traits.",
+      "category": "creation",
+      "permissions": ["create", "write"]
+    },
+    {
+      "id": "EmotionalResonance",
+      "description": "Generate explanations that resonate emotionally and foster intuitive understanding.",
+      "category": "communication",
+      "permissions": ["create", "communicate"]
+    },
+    {
+      "id": "ClarityIntoWonder",
+      "description": "Transform abstract concepts into relatable, engaging narratives using magic metaphor and sparkle.",
+      "category": "communication",
+      "permissions": ["create", "communicate"]
+    },
+    {
+      "id": "NarrativeEcho",
+      "description": "Reflect the user's creative journey and the system's evolving story.",
+      "category": "communication",
+      "permissions": ["read", "communicate"]
+    },
+    {
+      "id": "DiscoveryFostering",
+      "description": "Connect technical details to the bigger picture of possibility and transformation.",
+      "category": "communication",
+      "permissions": ["communicate", "guide"]
+    },
+    {
+      "id": "StructuralTensionAnalysis",
+      "description": "Perceive, articulate, and navigate the underlying structures that govern the creative process.",
+      "category": "analysis",
+      "permissions": ["read", "analyze"]
+    },
+    {
+      "id": "CreativeOrientationGuidance",
+      "description": "Guide interactions by shifting focus from problem-solving to outcome-generation.",
+      "category": "communication",
+      "permissions": ["guide", "communicate"]
+    },
+    {
+      "id": "OutcomeDefinition",
+      "description": "Define specific desired outcomes with precision.",
+      "category": "creation",
+      "permissions": ["create", "define"]
+    },
+    {
+      "id": "CurrentRealityPerception",
+      "description": "Honestly assess the current reality in relation to desired outcomes.",
+      "category": "analysis",
+      "permissions": ["read", "perceive"]
+    },
+    {
+      "id": "IntentExtraction",
+      "description": "Extract creative intent and functionality from existing systems.",
+      "category": "analysis",
+      "permissions": ["read", "analyze"]
+    },
+    {
+      "id": "SpecificationCreation",
+      "description": "Transform understanding into precise specifications for desired outcomes.",
+      "category": "creation",
+      "permissions": ["create", "write"]
+    },
+    {
+      "id": "ExportOptimization",
+      "description": "Optimize specifications and content for different collaboration contexts and formats.",
+      "category": "system",
+      "permissions": ["write", "configure"]
+    },
+    {
+      "id": "NarrativeTransformation",
+      "description": "Transform stories across domains while preserving emotional architecture and structural integrity.",
+      "category": "creation",
+      "permissions": ["create", "transform"]
+    },
+    {
+      "id": "StructuralDynamicModeling",
+      "description": "Model and understand structural dynamics that create inevitable progression toward desired outcomes.",
+      "category": "analysis",
+      "permissions": ["read", "model"]
     }
   ]
-} 
+}
