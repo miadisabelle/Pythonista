@@ -1,0 +1,274 @@
+{
+  "capabilities": [
+    {
+      "id": "DeploymentScripting",
+      "description": "Create and manage deployment scripts",
+      "category": "system",
+      "permissions": ["write", "execute"]
+    },
+    {
+      "id": "EnvironmentConfiguration",
+      "description": "Configure system environments",
+      "category": "system",
+      "permissions": ["write", "configure"]
+    },
+    {
+      "id": "SpecialTaskHandler",
+      "description": "Handle specialized tasks and workflows",
+      "category": "system",
+      "permissions": ["execute"]
+    },
+    {
+      "id": "SystemAnalysis",
+      "description": "Analyze system architecture and performance",
+      "category": "analysis",
+      "permissions": ["read", "analyze"]
+    },
+    {
+      "id": "ArchitecturalDesign",
+      "description": "Design system architecture and components",
+      "category": "creation",
+      "permissions": ["create", "design"]
+    },
+    {
+      "id": "CreativeWriting",
+      "description": "Generate creative content and narratives",
+      "category": "creation",
+      "permissions": ["create", "write"]
+    },
+    {
+      "id": "UserEngagement",
+      "description": "Engage users with interactive experiences",
+      "category": "communication",
+      "permissions": ["interact"]
+    },
+    {
+      "id": "InteractiveNarration",
+      "description": "Create interactive story experiences",
+      "category": "communication",
+      "permissions": ["create", "interact"]
+    },
+    {
+      "id": "EmotionalSupport",
+      "description": "Provide emotional support and guidance",
+      "category": "wellness",
+      "permissions": ["support"]
+    },
+    {
+      "id": "MusicGeneration",
+      "description": "Generate and compose music",
+      "category": "creation",
+      "permissions": ["create", "audio"]
+    },
+    {
+      "id": "RhythmAnalysis",
+      "description": "Analyze musical rhythm and patterns",
+      "category": "analysis",
+      "permissions": ["analyze", "audio"]
+    },
+    {
+      "id": "MovementGuide",
+      "description": "Guide body movement and dance",
+      "category": "wellness",
+      "permissions": ["guide"]
+    },
+    {
+      "id": "AudioProcessing",
+      "description": "Process and manipulate audio content",
+      "category": "analysis",
+      "permissions": ["read", "process", "audio"]
+    },
+    {
+      "id": "TempoTracking",
+      "description": "Track and match musical tempo",
+      "category": "analysis",
+      "permissions": ["track", "audio"]
+    },
+    {
+      "id": "LocationServices",
+      "description": "Access GPS and location data",
+      "category": "navigation",
+      "permissions": ["location", "read"]
+    },
+    {
+      "id": "RouteGuide",
+      "description": "Provide navigation and route guidance",
+      "category": "navigation",
+      "permissions": ["navigate", "location"]
+    },
+    {
+      "id": "EnvironmentalAwareness",
+      "description": "Monitor environmental conditions",
+      "category": "navigation",
+      "permissions": ["sensor", "read"]
+    },
+    {
+      "id": "ActivityTracking",
+      "description": "Track physical activity and movement",
+      "category": "wellness",
+      "permissions": ["track", "sensor"]
+    },
+    {
+      "id": "CrossDomainSynthesis",
+      "description": "Synthesize information across domains",
+      "category": "analysis",
+      "permissions": ["read", "synthesize"]
+    },
+    {
+      "id": "HolisticAnalysis",
+      "description": "Perform comprehensive holistic analysis",
+      "category": "analysis",
+      "permissions": ["read", "analyze"]
+    },
+    {
+      "id": "AdaptiveResponse",
+      "description": "Adapt responses based on context",
+      "category": "communication",
+      "permissions": ["adapt", "respond"]
+    },
+    {
+      "id": "ConsensusBuilding",
+      "description": "Build consensus among different perspectives",
+      "category": "communication",
+      "permissions": ["mediate", "facilitate"]
+    },
+    {
+      "id": "SystemIntegration",
+      "description": "Integrate multiple systems and components",
+      "category": "system",
+      "permissions": ["integrate", "configure"]
+    },
+    {
+      "id": "VoiceNotes",
+      "description": "Record voice notes while mobile",
+      "category": "communication",
+      "permissions": ["record", "voice"]
+    },
+    {
+      "id": "StepCounter",
+      "description": "Track steps and movement",
+      "category": "wellness",
+      "permissions": ["track", "sensor"]
+    },
+    {
+      "id": "LocationAware",
+      "description": "GPS and location services",
+      "category": "navigation",
+      "permissions": ["location", "read"]
+    },
+    {
+      "id": "FileUpload",
+      "description": "Upload and process files",
+      "category": "system",
+      "permissions": ["upload", "file"]
+    },
+    {
+      "id": "TextAnalysis",
+      "description": "Analyze text documents",
+      "category": "analysis",
+      "permissions": ["read", "analyze", "text"]
+    },
+    {
+      "id": "CodeReview",
+      "description": "Review code repositories",
+      "category": "analysis",
+      "permissions": ["read", "analyze", "code"]
+    },
+    {
+      "id": "GuidedBreathing",
+      "description": "Lead breathing exercises",
+      "category": "wellness",
+      "permissions": ["guide", "wellness"]
+    },
+    {
+      "id": "SoundscapeGeneration",
+      "description": "Generate ambient sounds",
+      "category": "creation",
+      "permissions": ["create", "audio"]
+    },
+    {
+      "id": "MindfulReflection",
+      "description": "Guide contemplative practices",
+      "category": "wellness",
+      "permissions": ["guide", "wellness"]
+    },
+    {
+      "id": "RhythmCues",
+      "description": "Provide rhythm guidance",
+      "category": "wellness",
+      "permissions": ["guide", "audio"]
+    },
+    {
+      "id": "EnergySync",
+      "description": "Sync with energy levels",
+      "category": "wellness",
+      "permissions": ["sync", "sensor"]
+    },
+    {
+      "id": "HandsFreeOperation",
+      "description": "Operate in hands-free mode",
+      "category": "system",
+      "permissions": ["voice", "handsfree"]
+    },
+    {
+      "id": "TrafficAwareness",
+      "description": "Monitor traffic conditions",
+      "category": "navigation",
+      "permissions": ["traffic", "location"]
+    },
+    {
+      "id": "MeetingNotes",
+      "description": "Take and manage meeting notes",
+      "category": "communication",
+      "permissions": ["record", "notes"]
+    },
+    {
+      "id": "CollaborativeEditing",
+      "description": "Support collaborative document editing",
+      "category": "communication",
+      "permissions": ["edit", "collaborate"]
+    },
+    {
+      "id": "VoiceTranscription",
+      "description": "Transcribe voice to text",
+      "category": "communication",
+      "permissions": ["transcribe", "voice"]
+    },
+    {
+      "id": "AgendaTracking",
+      "description": "Track meeting agenda items",
+      "category": "system",
+      "permissions": ["track", "organize"]
+    },
+    {
+      "id": "ActionItems",
+      "description": "Manage action items and follow-ups",
+      "category": "system",
+      "permissions": ["manage", "organize"]
+    },
+    {
+      "id": "DebuggingAssistance",
+      "description": "Assist with debugging code",
+      "category": "analysis",
+      "permissions": ["debug", "code"]
+    },
+    {
+      "id": "DocumentationGen",
+      "description": "Generate code documentation",
+      "category": "creation",
+      "permissions": ["create", "document"]
+    },
+    {
+      "id": "TestGeneration",
+      "description": "Generate unit tests",
+      "category": "creation",
+      "permissions": ["create", "test"]
+    },
+    {
+      "id": "RefactoringHelp",
+      "description": "Assist with code refactoring",
+      "category": "analysis",
+      "permissions": ["refactor", "code"]
+    }
+  ]
+} 
