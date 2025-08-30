@@ -1,11 +1,10 @@
 import ui
 import sound
 import sys
-sys.path.append("../lib")
 
-#import coaiamodule
-from coaiamodule import transcribe_audio
-import coaiamodule 
+# Refactored to use coaiapy package
+from coaiapy import coaiamodule, coaiauimodule
+from coaiapy.coaiamodule import transcribe_audio 
 import uuid
 
 import os
@@ -634,7 +633,7 @@ def save_text1(_text,_suffix='',is_new=False):
 	
 def wrap_abstract_process_button_pressed(sender,input_message):
   #MIGRATING IT TO coaiauimodule
-  import coaiauimodule
+  # import coaiauimodule # Removed, now imported globally from coaiapy
   #todo @STCGoal Abstract UI Button caller. 
   
   #abstract_process_button_pressed(sender,input_message,default_temperature=0.35,pre=''):
