@@ -1,11 +1,14 @@
 import ui
 import sound
 import sys
+import datetime # For Langfuse timestamps
 
 # Refactored to use coaiapy package
-from coaiapy import coaiamodule, coaiauimodule
+from coaiapy import coaiamodule, coaiauimodule, cofuse
 from coaiapy.coaiamodule import transcribe_audio 
 import uuid
+
+current_trace_id = None # Global variable to store the active Langfuse trace ID
 
 import os
 import clipboard
@@ -697,7 +700,7 @@ def summarizer_button_pressed(sender):
 
 
 def details2shape_pressed(sender):
-  global text_view, last_transcribed_text, text_file_path_mdhist, last_dictkore_result_message,d2s_text,d2s_text_src
+  global text_view, last_transcribed_text, text_file_path_mdhist, last_dictkore_result_message,d2s_text,d2s_text_src, current_trace_id # Add current_trace_id
   print('  details2shape button pressed')
   """
     transform in shapes the content
@@ -709,6 +712,8 @@ def details2shape_pressed(sender):
   d2s_text_src = text_view.text
     
   setstatus('d2s started...')
+  d2s_obs_id = str(uuid.uuid4())
+  d2s_start_time = datetime.datetime.utcnow().isoformat() + 'Z'
   try:
     # Send the request to d2s
     d2s_result_message = coaiamodule.d2s_send(d2s_text_src)
@@ -733,19 +738,70 @@ def details2shape_pressed(sender):
       save_mdhist(d2s_result_message, '-d2s',is_new=False,is_text=True)
       setstatus('d2s completed')
       d2s_text=d2s_result_message
+      
+      # --- Langfuse: Add d2s observation ---
+      try:
+          cofuse.add_observation(
+              observation_id=d2s_obs_id,
+              trace_id=current_trace_id,
+              observation_type="GENERATION",
+              name="details2shape",
+              input_data={"text_input": d2s_text_src},
+              output_data={"text_output": d2s_result_message},
+              start_time=d2s_start_time,
+              end_time=datetime.datetime.utcnow().isoformat() + 'Z'
+          )
+          print(f"Langfuse observation 'details2shape' added: {d2s_obs_id}")
+      except Exception as e_obs:
+          print(f"Error adding Langfuse observation 'details2shape': {e_obs}")
+      # --- End Langfuse ---
     else:
       setstatus('d2s failed. no value')
       d2s_text=None
+      # --- Langfuse: Log d2s failure ---
+      try:
+          cofuse.add_observation(
+              observation_id=d2s_obs_id,
+              trace_id=current_trace_id,
+              observation_type="GENERATION",
+              name="details2shape",
+              input_data={"text_input": d2s_text_src},
+              output_data={"error": "No value returned from d2s_send"},
+              start_time=d2s_start_time,
+              end_time=datetime.datetime.utcnow().isoformat() + 'Z',
+              level="ERROR"
+          )
+          print(f"Langfuse observation 'details2shape' failure logged: {d2s_obs_id}")
+      except Exception as e_obs:
+          print(f"Error logging Langfuse observation failure: {e_obs}")
+      # --- End Langfuse ---
     
   except Exception as ex:
     setstatus('d2s failed. see console')
     print(ex)
+    # --- Langfuse: Log d2s exception ---
+    try:
+        cofuse.add_observation(
+            observation_id=d2s_obs_id,
+            trace_id=current_trace_id,
+            observation_type="GENERATION",
+            name="details2shape",
+            input_data={"text_input": d2s_text_src},
+            output_data={"error": str(ex)},
+            start_time=d2s_start_time,
+            end_time=datetime.datetime.utcnow().isoformat() + 'Z',
+            level="ERROR"
+        )
+        print(f"Langfuse observation 'details2shape' exception logged: {d2s_obs_id}")
+    except Exception as e_obs:
+        print(f"Error logging Langfuse observation exception: {e_obs}")
+    # --- End Langfuse ---
     
     
   
 
 def dictkore_button_pressed(sender):
-  global text_view, changed_text, last_transcribed_text, text_file_path_mdhist, last_dictkore_result_message
+  global text_view, changed_text, last_transcribed_text, text_file_path_mdhist, last_dictkore_result_message, current_trace_id # Add current_trace_id
   
   print('  dictKore button pressed')
   """
@@ -770,6 +826,8 @@ def dictkore_button_pressed(sender):
     print(last_transcribed_text)
         
   setstatus('dictkore started...')
+  dictkore_obs_id = str(uuid.uuid4())
+  dictkore_start_time = datetime.datetime.utcnow().isoformat() + 'Z'
   try:
     # Send the request to dictkore
         
@@ -794,13 +852,65 @@ def dictkore_button_pressed(sender):
             
       save_mdhist(dictkore_result_message, '-dkored',is_new=False,is_text=True)
       setstatus('dictkore completed')
+      
+      # --- Langfuse: Add dictkore observation ---
+      try:
+          cofuse.add_observation(
+              observation_id=dictkore_obs_id,
+              trace_id=current_trace_id,
+              observation_type="GENERATION",
+              name="dictkore",
+              input_data={"text_input": changed_text},
+              output_data={"text_output": dictkore_result_message},
+              start_time=dictkore_start_time,
+              end_time=datetime.datetime.utcnow().isoformat() + 'Z'
+          )
+          print(f"Langfuse observation 'dictkore' added: {dictkore_obs_id}")
+      except Exception as e_obs:
+          print(f"Error adding Langfuse observation 'dictkore': {e_obs}")
+      # --- End Langfuse ---
     else:
       setstatus('dictkore failed. no value')
+      # --- Langfuse: Log dictkore failure ---
+      try:
+          cofuse.add_observation(
+              observation_id=dictkore_obs_id,
+              trace_id=current_trace_id,
+              observation_type="GENERATION",
+              name="dictkore",
+              input_data={"text_input": changed_text},
+              output_data={"error": "No value returned from dictkore_send"},
+              start_time=dictkore_start_time,
+              end_time=datetime.datetime.utcnow().isoformat() + 'Z',
+              level="ERROR"
+          )
+          print(f"Langfuse observation 'dictkore' failure logged: {dictkore_obs_id}")
+      except Exception as e_obs:
+          print(f"Error logging Langfuse observation failure: {e_obs}")
+      # --- End Langfuse ---
     
   except Exception as ex:
     setstatus('dictkore failed. see console')
     print(ex)
+    # --- Langfuse: Log dictkore exception ---
+    try:
+        cofuse.add_observation(
+            observation_id=dictkore_obs_id,
+            trace_id=current_trace_id,
+            observation_type="GENERATION",
+            name="dictkore",
+            input_data={"text_input": changed_text},
+            output_data={"error": str(ex)},
+            start_time=dictkore_start_time,
+            end_time=datetime.datetime.utcnow().isoformat() + 'Z',
+            level="ERROR"
+        )
+        print(f"Langfuse observation 'dictkore' exception logged: {dictkore_obs_id}")
+    except Exception as e_obs:
+        print(f"Error logging Langfuse observation exception: {e_obs}")
+    # --- End Langfuse ---
   last_dictkore_result_message = dictkore_result_message
+
 
 
 
@@ -843,15 +953,15 @@ def synt_button_pressed(sender):
 
 #execute our prototype that stnthesize into audio what is in the text view ui
 def run_audio_synt(vid):
-  global text_file_path,dir_base,store_root,last_transcribed_text,text_view,dir_base,rec_basename,last_synt_audio_file_path,lang,synt_audio_ext_prefix,synt_audio_format,txt_out_ext,synt_text_ext
+  global text_file_path,dir_base,store_root,last_transcribed_text,text_view,dir_base,rec_basename,last_synt_audio_file_path,lang,synt_audio_ext_prefix,synt_audio_format,txt_out_ext,synt_text_ext, current_trace_id # Add current_trace_id
   text=text_view.text#last_transcribed_text,text_view
   
   
   outfilepath,synt_text_outfilepath=mk_synt_outpath()
   print('   stbt:'+outfilepath  )
   
-  
-  
+  synt_obs_id = str(uuid.uuid4())
+  synt_start_time = datetime.datetime.utcnow().isoformat() + 'Z'
   try:
     last_synt_audio_file_path=None #we reset our last path before we do it
     setstatus('Synthesizing audio...')
@@ -885,9 +995,43 @@ def run_audio_synt(vid):
     save_mdhist(_text,_header='####',is_new=False,is_text=False)
     print('======AudioSynt added to mdhist====')
     
+    # --- Langfuse: Add synthesis observation ---
+    try:
+        cofuse.add_observation(
+            observation_id=synt_obs_id,
+            trace_id=current_trace_id,
+            observation_type="SPAN", # SPAN for an operation, not a generation
+            name="synthesize-audio",
+            input_data={"text_input": text, "voice_id": vid, "format": synt_audio_format},
+            output_data={"audio_file_path": outfilepath},
+            start_time=synt_start_time,
+            end_time=datetime.datetime.utcnow().isoformat() + 'Z'
+        )
+        print(f"Langfuse observation 'synthesize-audio' added: {synt_obs_id}")
+    except Exception as e_obs:
+        print(f"Error adding Langfuse observation 'synthesize-audio': {e_obs}")
+    # --- End Langfuse ---
+
   except Exception as _ex:
     print('  synthesize failed:')
     print(_ex)
+    # --- Langfuse: Log synthesis exception ---
+    try:
+        cofuse.add_observation(
+            observation_id=synt_obs_id,
+            trace_id=current_trace_id,
+            observation_type="SPAN",
+            name="synthesize-audio",
+            input_data={"text_input": text, "voice_id": vid, "format": synt_audio_format},
+            output_data={"error": str(_ex)},
+            start_time=synt_start_time,
+            end_time=datetime.datetime.utcnow().isoformat() + 'Z',
+            level="ERROR"
+        )
+        print(f"Langfuse observation 'synthesize-audio' exception logged: {synt_obs_id}")
+    except Exception as e_obs:
+        print(f"Error logging Langfuse observation exception: {e_obs}")
+    # --- End Langfuse ---
   print('=======================')
     
 
@@ -949,7 +1093,7 @@ def recording_already(sender):
   
   
 def record_action(sender):
-  global recorder, audio_file_path,rec_filename,changed_text,rec_state
+  global recorder, audio_file_path,rec_filename,changed_text,rec_state, current_trace_id # Add current_trace_id to global
   
   #todo @STCIssue Press when Recording Delete current without transcribing it
   if rec_state:
@@ -961,6 +1105,15 @@ def record_action(sender):
     prerecording(sender)
     rec_state=True
     
+    # --- Langfuse: Start new trace ---
+    current_trace_id = str(uuid.uuid4())
+    try:
+        cofuse.add_trace(trace_id=current_trace_id, name=f"corecorder-session-{rec_basename}-{rec_seq}", user_id="pythonista-user")
+        print(f"Langfuse trace started: {current_trace_id}")
+    except Exception as e:
+        print(f"Error starting Langfuse trace: {e}")
+    # --- End Langfuse ---
+
     recorder = sound.Recorder(audio_file_path)
     
     recorder.record()
@@ -977,7 +1130,7 @@ def recording_stopping(sender):
 	
 def recording_stopped(sender,_recorder=None):
 	
-	global recorder, audio_file_path,text_file_path,text_file_path2,rec_filename,last_transcribed_text,text_fn_suffix,audio_ext,text_view
+	global recorder, audio_file_path,text_file_path,text_file_path2,rec_filename,last_transcribed_text,text_fn_suffix,audio_ext,text_view, current_trace_id # Add current_trace_id to global
 	#global recorder,audio_file_path,rec_filename,text_file_path,text_file_path2
 	if _recorder is not None:
 		recorder=_recorder
@@ -1001,6 +1154,8 @@ def recording_stopped(sender,_recorder=None):
 	setstatus(rec_filename+'->Transcribing')
 	
 	# Convert audio data to text using coaiaspeech2text module
+	transcription_obs_id = str(uuid.uuid4())
+	transcription_start_time = datetime.datetime.utcnow().isoformat() + 'Z'
 	try:
 	  #todo transcribe_audio lob call
 		transcribed_text = transcribe_audio(audio_file_path)
@@ -1017,10 +1172,44 @@ def recording_stopped(sender,_recorder=None):
 		
 		
 		text_view.text = transcribed_text
+		
+		# --- Langfuse: Add transcription observation ---
+		try:
+			cofuse.add_observation(
+				observation_id=transcription_obs_id,
+				trace_id=current_trace_id,
+				observation_type="GENERATION",
+				name="transcribe-audio",
+				input_data={"audio_file_path": audio_file_path},
+				output_data={"transcribed_text": transcribed_text},
+				start_time=transcription_start_time,
+				end_time=datetime.datetime.utcnow().isoformat() + 'Z'
+			)
+			print(f"Langfuse observation 'transcribe-audio' added: {transcription_obs_id}")
+		except Exception as e:
+			print(f"Error adding Langfuse observation 'transcribe-audio': {e}")
+		# --- End Langfuse ---
+
 	except Exception as e:
 		setstatus('Failed transcribing..')
 		print(e)
-	
+		# --- Langfuse: Log error for transcription observation ---
+		try:
+			cofuse.add_observation(
+				observation_id=transcription_obs_id,
+				trace_id=current_trace_id,
+				observation_type="GENERATION",
+				name="transcribe-audio",
+				input_data={"audio_file_path": audio_file_path},
+				output_data={"error": str(e)},
+				start_time=transcription_start_time,
+				end_time=datetime.datetime.utcnow().isoformat() + 'Z',
+				level="ERROR"
+			)
+			print(f"Langfuse observation 'transcribe-audio' error logged: {transcription_obs_id}")
+		except Exception as e_obs:
+			print(f"Error logging Langfuse observation error: {e_obs}")
+		# --- End Langfuse ---
 	
 	try:
 		

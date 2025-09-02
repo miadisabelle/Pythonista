@@ -1,7 +1,8 @@
 import ui
 
 class LumenCalcView(ui.View):
-    def __init__(self):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
         self.name = 'LumenCalc'
         self.background_color = '#f0f0f0' # Light grey background
 
@@ -13,7 +14,7 @@ class LumenCalcView(ui.View):
 
         self.bill_tf = ui.TextField(frame=(140, 20, 200, 32))
         self.bill_tf.placeholder = 'e.g., 50.00'
-        self.bill_tf.keyboard_type = ui.KEYBOARD_TYPE_DECIMAL_PAD
+        self.bill_tf.keyboard_type = 'decimal_pad'
         self.bill_tf.border_width = 1
         self.bill_tf.border_color = '#cccccc'
         self.bill_tf.corner_radius = 5
@@ -27,7 +28,7 @@ class LumenCalcView(ui.View):
 
         self.tip_tf = ui.TextField(frame=(140, 70, 200, 32))
         self.tip_tf.placeholder = 'e.g., 15'
-        self.tip_tf.keyboard_type = ui.KEYBOARD_TYPE_NUMBER_PAD
+        self.tip_tf.keyboard_type = 'number_pad'
         self.tip_tf.text = '15' # Default tip
         self.tip_tf.border_width = 1
         self.tip_tf.border_color = '#cccccc'
